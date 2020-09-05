@@ -1,11 +1,12 @@
 import { defineComponent } from 'vue';
-import { RouterView } from 'vue-router';
 
 export default defineComponent({
-  name: 'App',
+  name: 'About',
   setup() {
     return () => (
-      <RouterView />
-    )
+      <>
+        <h1>About</h1>
+      </>
+    );
   }
 });
