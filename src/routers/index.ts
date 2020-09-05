@@ -15,14 +15,8 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'user',
         name: 'User',
-        component: () => import(/** webpackChunkName: "user" */'/@/pages/User'),
-        // component: import('/@/pages/Home')
+        component: () => import('/@/pages/User'),
       },
-      {
-        path: 'about',
-        name: 'About',
-        component: ()=>import(/** webpackChunkName: "about" */'../pages/About')
-      }
     ]
   }
 ]
