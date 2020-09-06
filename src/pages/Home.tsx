@@ -9,8 +9,6 @@ export default defineComponent({
         Home page
         <br/>
         <RouterLink to='/user'>to User</RouterLink>
-        <br/>
-        <RouterLink to='/about'>to About</RouterLink>
       </div>
     )
   }

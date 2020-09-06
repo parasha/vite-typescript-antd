@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     redirect: '/home',
     name: 'UserLogin',
-    component: import('/@/layout/userLayout'),
+    component: import('../layout/BasicLayout'),
     children: [
       {
         path: 'home',
@@ -18,6 +18,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('/@/pages/User'),
       },
     ]
+  },
+  {
+    // 登录页
+    path: '/login',
+    name: 'Login',
+    component: import('/@/pages/Login'),
   }
 ]
 
