@@ -1,46 +1,48 @@
 import { defineComponent, reactive } from 'vue';
+import { RouteRecordRaw, RouterLink } from 'vue-router';
 import { Layout, Menu } from 'ant-design-vue';
 import Logo from '/@/assets/logo.png';
 import style from './less/basicLayout.module.less';
-import {
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-} from '@ant-design/icons-vue';
+import { routes } from '/@/routers/index';
+import store from '/@/store/index';
 
-const { Sider } = Layout;
+const menuList = (list: RouteRecordRaw[], basePath = '/') => list.map(item => {
+  const { children, meta = {} } = item;
+  if (children) {
+    basePath += item.path + '/';
+    return (
+      <Menu.SubMenu title={meta.title}>
+        {menuList(children, basePath)}
+      </Menu.SubMenu>
+    )
+  } else {
+    return (
+      // ???? type item.name ????
+      <Menu.Item key={item.name}>
+        <RouterLink to={item.path}>{meta.title}</RouterLink>
+      </Menu.Item>
+    )
+  }
+})
+
+
 export default defineComponent({
 
   setup() {
     const state = reactive({
-      collapsed: false,
-      selectedKeys: ['1']
-    })
+      openKeys: []
+    });
 
     return () => (
-      <Sider collapsed={state.collapsed} trigger={null} collapsible>
+      <Layout.Sider trigger={null}>
         <div class={style.header}>
-          <img src={Logo}/>
+          <img src={Logo} />
           Vite + AntD
         </div>
-        <Menu theme="dark" mode="inline" selectedKeys=
-          {state.selectedKeys}>
-          <Menu.Item key="1">
-            <UserOutlined />
-            <span>nav 1</span>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <VideoCameraOutlined />
-            <span>nav 2</span>
-          </Menu.Item>
-          <Menu.Item key="3">
-            <UploadOutlined />
-            <span>nav 3</span>
-          </Menu.Item>
+        <Menu theme="dark" mode="inline" selectedKeys={store.state.siderKey}>
+          {menuList(routes[0].children || [])}
         </Menu>
-      </Sider>
+      </Layout.Sider>
     )
   }
 })
