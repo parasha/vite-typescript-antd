@@ -21,6 +21,7 @@ export default createStore({
     // 登录
     async login(context, payload: {username: string, password: string}) {
       console.log(payload);
+      console.log(router);
     },
     // 检查登录状态
     async getUserInfo(context) {

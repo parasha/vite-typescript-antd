@@ -27,7 +27,7 @@ export const routes: RouteRecordRaw[] | [] = [
     // 登录页
     path: '/login',
     name: 'Login',
-    component: import('/@/pages/Login'),
+    component: import('/@/pages/login/index'),
   }
 ]
 
