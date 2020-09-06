@@ -2,6 +2,13 @@ import { defineComponent, reactive } from 'vue';
 import { Layout, Menu } from 'ant-design-vue';
 import Logo from '/@/assets/logo.png';
 import style from './less/basicLayout.module.less';
+import {
+  UserOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+} from '@ant-design/icons-vue';
 
 const { Sider } = Layout;
 export default defineComponent({
@@ -21,15 +28,15 @@ export default defineComponent({
         <Menu theme="dark" mode="inline" selectedKeys=
           {state.selectedKeys}>
           <Menu.Item key="1">
-            <user-outlined />
+            <UserOutlined />
             <span>nav 1</span>
           </Menu.Item>
           <Menu.Item key="2">
-            <video-camera-outlined />
+            <VideoCameraOutlined />
             <span>nav 2</span>
           </Menu.Item>
           <Menu.Item key="3">
-            <upload-outlined />
+            <UploadOutlined />
             <span>nav 3</span>
           </Menu.Item>
         </Menu>
