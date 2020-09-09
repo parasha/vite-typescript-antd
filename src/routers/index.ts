@@ -12,15 +12,35 @@ export const routes: RouteRecordRaw[] | [] = [
       {
         path: 'home',
         name: 'Home',
-        meta: {title: '首页'},
+        meta: { title: '首页' },
         component: import('/@/pages/Home/index')
       },
       {
         path: 'chart',
         name: 'Chart',
-        meta: {title: '图表'},
+        meta: { title: '图表' },
         component: () => import('/@/pages/Chart/index'),
       },
+      {
+        path: 'antd',
+        name: 'antd',
+        meta: { title: 'antd 组件' },
+        component: () => import('/@/pages/Antd/index'),
+        children: [
+          {
+            path: 'table',
+            name: 'Antd-Table',
+            meta: { title: '表格' },
+            component: () => import('/@/pages/Antd/pages/Table')
+          }
+        ],
+      },
+      {
+        path: 'test',
+        name: 'Test',
+        meta: {title: '测试'},
+        component: import('/@/pages/test/index')
+      }
     ]
   },
   {
@@ -36,7 +56,7 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from, next)=>{
+router.beforeEach((to, from, next) => {
   store.commit('changeSiderMenu', to.name)
   next();
 })

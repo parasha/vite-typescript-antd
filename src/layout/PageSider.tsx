@@ -8,17 +8,20 @@ import store from '/@/store/index';
 
 const menuList = (list: RouteRecordRaw[], basePath = '/') => list.map(item => {
   const { children, meta = {} } = item;
+  if (meta.hide) {
+    return
+  }
   if (children) {
-    basePath += item.path + '/';
+    console.log(basePath);
     return (
       <Menu.SubMenu title={meta.title}>
-        {menuList(children, basePath)}
+        {menuList(children, basePath + item.path + '/')}
       </Menu.SubMenu>
     )
   } else {
     return (
       <Menu.Item key={item.name as string}>
-        <RouterLink to={item.path}>{meta.title}</RouterLink>
+        <RouterLink to={basePath + item.path}>{meta.title}</RouterLink>
       </Menu.Item>
     )
   }
