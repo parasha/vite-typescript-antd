@@ -34,8 +34,10 @@ export default defineComponent({
 
     return () => (
       <Table dataSource={tableData}>
-        <Column title='First Name' dataIndex='firstName' />
-        <Column title='Last Name' dataIndex='lastName' />
+        {/* <ColumnGroup title='name'> */}
+          <Column title='First Name' dataIndex='firstName' />
+          <Column title='Last Name' dataIndex='lastName' />
+        {/* </ColumnGroup> */}
         <Column title='Age' dataIndex='age' />
         <Column title='Address' dataIndex='address' />
       </Table>
