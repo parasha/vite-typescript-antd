@@ -12,7 +12,7 @@ export const routes: RouteRecordRaw[] | [] = [
       {
         path: 'home',
         name: 'Home',
-        meta: { title: '首页' },
+        meta: { title: '首页', hide: true, },
         component: import('/@/pages/Home/index')
       },
       {
