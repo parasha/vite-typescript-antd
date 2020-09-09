@@ -16,10 +16,10 @@ export const routes: RouteRecordRaw[] | [] = [
         component: import('/@/pages/Home')
       },
       {
-        path: 'user',
-        name: 'User',
-        meta: {title: '没什么用的页面'},
-        component: () => import('/@/pages/User'),
+        path: 'chart',
+        name: 'Chart',
+        meta: {title: '图表'},
+        component: () => import('/@/pages/Chart'),
       },
     ]
   },

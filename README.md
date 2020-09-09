@@ -7,6 +7,7 @@
 - typescript
 - jsx(tsx)
 - ant-design-vue
+- echarts
 
 ## setup
 ```bash
