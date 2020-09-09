@@ -13,13 +13,13 @@ export const routes: RouteRecordRaw[] | [] = [
         path: 'home',
         name: 'Home',
         meta: {title: '首页'},
-        component: import('/@/pages/Home')
+        component: import('/@/pages/Home/index')
       },
       {
         path: 'chart',
         name: 'Chart',
         meta: {title: '图表'},
-        component: () => import('/@/pages/Chart'),
+        component: () => import('/@/pages/Chart/index'),
       },
     ]
   },

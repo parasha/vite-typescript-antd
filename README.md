@@ -1,11 +1,11 @@
 # 🚧 vite-typescript-antd
 
-## 技术栈
+## 依赖
 
 - vite
 - vue3 + vuex 4.x + vue-router 4.x
 - typescript
-- jsx(tsx)
+- tsx
 - ant-design-vue
 - echarts
 
