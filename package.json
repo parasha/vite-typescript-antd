@@ -7,8 +7,12 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^5.1.5",
+    "@types/echarts": "^4.6.5",
+    "@types/lodash": "^4.14.161",
     "ant-design-vue": "^2.0.0-beta.6",
     "axios": "^0.20.0",
+    "echarts": "^4.9.0",
+    "lodash": "^4.17.20",
     "vue": "^3.0.0-rc.1",
     "vue-router": "^4.0.0-beta.2",
     "vuex": "^4.0.0-beta.4"

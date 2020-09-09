@@ -17,8 +17,7 @@ const menuList = (list: RouteRecordRaw[], basePath = '/') => list.map(item => {
     )
   } else {
     return (
-      // ???? type item.name ????
-      <Menu.Item key={item.name}>
+      <Menu.Item key={item.name as string}>
         <RouterLink to={item.path}>{meta.title}</RouterLink>
       </Menu.Item>
     )
