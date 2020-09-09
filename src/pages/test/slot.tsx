@@ -4,6 +4,8 @@ export default defineComponent({
   name: 'Test-slot',
   props: {
     name: String,
+    number: Number,
+    onEvent: Function,
   },
   setup(props, context) {
 
