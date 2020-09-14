@@ -6,6 +6,10 @@ import App from '/@/App';
 import '/@/common/less/common.less';
 import 'ant-design-vue/dist/antd.css';
 
+import { install } from './plugins/test';
+
 console.log('环境：', process.env.NODE_ENV);
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App).use(store).use(router).use(install, 'test plugin options')
+console.log('app: ', app);
+app.mount('#app');

@@ -1,8 +1,8 @@
-import { defineComponent, reactive, watchEffect, isRef } from 'vue';
+import { defineComponent, reactive, watchEffect, isRef, onMounted } from 'vue';
 import { Button } from 'ant-design-vue';
 import SlotChild from './slot';
 import SlotChildSfc from './slot.vue';
-
+import { testPluginFn } from '/@/plugins/test';
 
 export default defineComponent({
   name: 'Test',
@@ -19,8 +19,14 @@ export default defineComponent({
       console.log('watchEffect:', state.count)
     })
 
+    onMounted(() => {
+      testPluginFn();
+    })
+
+    const directives = [{ name: 'my-directive', value: 'directive binding', modifiers: { abc: true } }];
+
     return () => (
-      <div>
+      <div {...{directives}}>
         只有在子组件中声明了 props ， 才会作为 props 传入
         <hr />
         <SlotChildSfc name='sfc slot' number={1} onEvent={() => { console.log('slot sfc parent click') }}>
