@@ -36,6 +36,12 @@ export const routes: RouteRecordRaw[] | [] = [
         ],
       },
       {
+        path: 'sfc',
+        name: 'Sfc',
+        meta: {title:'单页面组件'},
+        component: ()=>import('/@/pages/SFC/index.vue'),
+      },
+      {
         path: 'test',
         name: 'Test',
         meta: {title: '测试'},
