@@ -1,5 +1,5 @@
 <template>
-  <div class="page-sfc">
+  <div class="page-sfc" v-my-directive='{a:1}'>
     单页面组件
   </div>
 </template>
