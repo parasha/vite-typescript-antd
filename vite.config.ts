@@ -2,9 +2,6 @@ import { UserConfig } from 'vite';
 import path from 'path'
 
 const config: UserConfig = {
-  // new webpack.DefinePlugin({
-  //   'process.env': env
-  // }),
   // proxy: {
   //   // with options
   //   '/api': {
@@ -15,6 +12,9 @@ const config: UserConfig = {
   // },
   alias: {
     '/@/': path.resolve(__dirname, './src')
+  },
+  define:{
+    'ENV': process.env.APP_ENV
   },
   optimizeDeps: {
     include: ["lodash", "echarts"]
