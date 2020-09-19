@@ -32,19 +32,25 @@ export const routes: RouteRecordRaw[] | [] = [
             name: 'Antd-Table',
             meta: { title: '表格' },
             component: () => import('/@/pages/Antd/pages/Table')
-          }
+          },
+          // {
+          //   path: 'useForm',
+          //   name: 'Antd-UseForm',
+          //   meta: { title: '使用useForm的表单' },
+          //   component: () => import('/@/pages/Antd/pages/UseForm')
+          // },
         ],
       },
       {
         path: 'sfc',
         name: 'Sfc',
-        meta: {title:'单页面组件'},
-        component: ()=>import('/@/pages/SFC/index.vue'),
+        meta: { title: '单页面组件' },
+        component: () => import('/@/pages/SFC/index.vue'),
       },
       {
         path: 'test',
         name: 'Test',
-        meta: {title: '测试'},
+        meta: { title: '测试' },
         component: import('/@/pages/test/index')
       }
     ]
