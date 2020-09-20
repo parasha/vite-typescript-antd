@@ -1,5 +1,5 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
-import store from '/@/store/index';
+import store from '@/store/index';
 
 export const routes: RouteRecordRaw[] | [] = [
   {
@@ -13,31 +13,31 @@ export const routes: RouteRecordRaw[] | [] = [
         path: 'home',
         name: 'Home',
         meta: { title: '首页', hide: true, },
-        component: import('/@/pages/Home/index')
+        component: import('@/pages/Home/index')
       },
       {
         path: 'chart',
         name: 'Chart',
         meta: { title: '图表' },
-        component: () => import('/@/pages/Chart/index'),
+        component: () => import(/* webpackChunkName: "chart" */'@/pages/Chart/index'),
       },
       {
         path: 'antd',
         name: 'antd',
         meta: { title: 'antd 组件' },
-        component: () => import('/@/pages/Antd/index'),
+        component: () => import(/* webpackChunkName: "antd/index" */'@/pages/Antd/index'),
         children: [
           {
             path: 'table',
             name: 'Antd-Table',
             meta: { title: '表格' },
-            component: () => import('/@/pages/Antd/pages/Table')
+            component: () => import(/* webpackChunkName: "antd/table" */'@/pages/Antd/pages/Table')
           },
           {
             path: 'form',
             name: 'Antd-Form',
             meta: { title: '表单' },
-            component: () => import('/@/pages/Antd/pages/Form')
+            component: () => import(/* webpackChunkName: "antd/form" */'@/pages/Antd/pages/Form')
           },
         ],
       },
@@ -45,13 +45,13 @@ export const routes: RouteRecordRaw[] | [] = [
         path: 'sfc',
         name: 'Sfc',
         meta: { title: '单页面组件' },
-        component: () => import('/@/pages/SFC/index.vue'),
+        component: () => import(/* webpackChunkName: "sfc" */'@/pages/SFC/index.vue'),
       },
       {
         path: 'test',
         name: 'Test',
         meta: { title: '测试' },
-        component: import('/@/pages/test/index')
+        component: import('@/pages/test/index')
       }
     ]
   },
@@ -59,7 +59,7 @@ export const routes: RouteRecordRaw[] | [] = [
     // 登录页
     path: '/login',
     name: 'Login',
-    component: import('/@/pages/login/index'),
+    component: import('@/pages/login/index'),
   }
 ]
 

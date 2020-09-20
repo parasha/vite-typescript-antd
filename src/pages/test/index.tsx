@@ -2,7 +2,7 @@ import { defineComponent, reactive, watchEffect, isRef, onMounted } from 'vue';
 import { Button } from 'ant-design-vue';
 import SlotChild from './slot';
 import SlotChildSfc from './slot.vue';
-import { testPluginFn } from '/@/plugins/test';
+import { testPluginFn } from '@/plugins/test';
 
 export default defineComponent({
   name: 'Test',
@@ -24,7 +24,7 @@ export default defineComponent({
     })
 
     return () => (
-      <div>
+      <div my-directive>
         只有在子组件中声明了 props ， 才会作为 props 传入
         <hr />
         <SlotChildSfc name='sfc slot' number={1} onEvent={() => { console.log('slot sfc parent click') }}>
@@ -32,7 +32,9 @@ export default defineComponent({
         </SlotChildSfc>
         <hr />
         <SlotChild name='slot' number={1} onEvent={() => { console.log('slot parent click') }}>
-          {{ default: () => (<span>default slot</span>), name: () => (<span>name slot</span>) }}
+          {{ default: () => (<span>default slot fn</span>), name: () => (<span>name slot fn</span>) }}
+          {/* <span slot='default'>default slot</span> */}
+          {/* <span slot='name'>name slot</span> */}
         </SlotChild>
         <hr />
         <Button type='danger' onClick={add}>喜加一</Button>

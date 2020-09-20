@@ -2,13 +2,13 @@
   "name": "vite-typescript-antd",
   "version": "0.0.0",
   "scripts": {
-    "dev": "cross-env APP_ENV=dev vite",
-    "build": "vite build"
+    "dev": "webpack-dev-server --config webpack/webpack.config.js",
+    "dev:vite": "cross-env APP_ENV=dev vite",
+    "build:vite": "vite build"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^5.1.5",
     "@types/echarts": "^4.6.5",
-    "@types/lodash": "^4.14.161",
     "ant-design-vue": "^2.0.0-beta.9",
     "axios": "^0.20.0",
     "echarts": "^4.9.0",
@@ -18,10 +18,27 @@
     "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0",
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/plugin-transform-typescript": "^7.10.3",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@vue/babel-plugin-jsx": "^1.0.0-rc.2",
+    "@vue/cli-plugin-typescript": "^4.5.4",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
     "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^0.11.2",
     "typescript": "^4.0.3",
-    "vite": "^1.0.0-rc.4"
+    "vue-loader": "^16.0.0-alpha.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }

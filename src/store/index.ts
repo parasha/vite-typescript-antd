@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
-import router from '/@/routers/index';
-import { getUserInfo } from '/@/api/login';
+import router from '@/routers/index';
+import { getUserInfo } from '@/api/login';
 
 export default createStore({
   modules: {},

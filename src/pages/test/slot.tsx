@@ -25,9 +25,9 @@ export default defineComponent({
 
     return () => (
       <>
-        <p onClick={click}>slot tsx：</p>
+        <p onClick={click}>slot tsx写法：</p>
         <p>slot 标签：<slot></slot>、<slot name='name'></slot></p>
-        <p>context.slot：{slots.default && slots.default()}、{slots.name && slots.name()}</p>
+        <p>context.slot：default-{slots.default && slots.default()}……name-{slots.name && slots.name()}</p>
       </>
     )
   }
