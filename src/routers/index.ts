@@ -33,12 +33,12 @@ export const routes: RouteRecordRaw[] | [] = [
             meta: { title: '表格' },
             component: () => import('/@/pages/Antd/pages/Table')
           },
-          // {
-          //   path: 'useForm',
-          //   name: 'Antd-UseForm',
-          //   meta: { title: '使用useForm的表单' },
-          //   component: () => import('/@/pages/Antd/pages/UseForm')
-          // },
+          {
+            path: 'form',
+            name: 'Antd-Form',
+            meta: { title: '表单' },
+            component: () => import('/@/pages/Antd/pages/Form')
+          },
         ],
       },
       {

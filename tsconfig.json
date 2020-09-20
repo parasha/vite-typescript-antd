@@ -5,11 +5,12 @@
     "paths": {
       "/@/*": ["src/*"]
     },
-    "sourceMap": true,
+    "declaration": true,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
+    "esModuleInterop": true,
     "allowJs": true,
     "isolatedModules": true,
   },
