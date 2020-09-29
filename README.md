@@ -3,6 +3,7 @@
 ## 依赖
 
 - vite
+- vite-jsx(支持 vue 原生指令：v-if, v-model, v-show……)
 - vue3 + vuex 4.x + vue-router 4.x
 - typescript
 - tsx
