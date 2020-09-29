@@ -1,5 +1,6 @@
 import { UserConfig } from 'vite';
-import path from 'path'
+import path from 'path';
+import { createJsxPlugin } from "vite-jsx/plugin";
 
 const config: UserConfig = {
   // proxy: {
@@ -18,7 +19,10 @@ const config: UserConfig = {
   },
   optimizeDeps: {
     include: ["lodash", "echarts"]
-  }
+  },
+  plugins: [
+    createJsxPlugin(), // jsx 支持 vue 原生指令
+  ],
 }
 
 export default config;

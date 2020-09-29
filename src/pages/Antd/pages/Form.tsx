@@ -18,18 +18,18 @@ export default defineComponent({
     return () => (
       <div>
         <p>表单：</p>
-        <Form model={formData}>
+        <Form v-model={formData}>
           <Form.Item label='姓名'>
-            <Input v-model={[formData.name, 'value']} />
+            <Input v-model={formData.name}/>
           </Form.Item>
           <Form.Item label='居住地'>
-            <Select value={formData.region} onChange={(value) => { console.log(value) }}>
+            <Select v-model={formData.region}>
               <Select.Option value='beijing'>{() => '北京'}</Select.Option>
               <Select.Option value='shanghai'>{() => '上海'}</Select.Option>
             </Select>
           </Form.Item>
           <Form.Item label='富文本'>
-            <Input value={formData.desc} onChange={(e) => { formData.desc = e.target.value; }} />
+            <Input v-model={formData.desc}/>
           </Form.Item>
           <Form.Item>
             <Button onClick={submit}>submit</Button>
