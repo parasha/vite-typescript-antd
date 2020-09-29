@@ -24,11 +24,11 @@ export default defineComponent({
           </p>
         <div class="input-line">
           <div class="input-label">用户名：</div>
-          <Input type="text" placeholder='请输入用户名' value={state.username} onChange={e => { state.username = e.target.value; }} />
+          <Input type="text" placeholder='请输入用户名' v-model={state.username}/>
         </div>
         <div class="input-line">
           <div class="input-label">密码：</div>
-          <Input type="password" placeholder='请输入密码' value={state.password} onChange={e => { state.password = e.target.value; }} />
+          <Input type="password" placeholder='请输入密码' v-model={state.password} />
         </div>
         <Button size='large' onClick={submit}>提交</Button>
       </div>
