@@ -17,10 +17,10 @@ export default defineComponent({
 
     return () => (
       <div>
-        <p>表单：</p>
-        <Form v-model={formData}>
+        <p>表单：这个还是有问题</p>
+        <Form model={formData}>
           <Form.Item label='姓名'>
-            <Input v-model={formData.name}/>
+            <Input value={formData.name} onChange={(e)=>{formData.name = e.target.value}}/>
           </Form.Item>
           <Form.Item label='居住地'>
             <Select v-model={formData.region}>
@@ -29,7 +29,7 @@ export default defineComponent({
             </Select>
           </Form.Item>
           <Form.Item label='富文本'>
-            <Input v-model={formData.desc}/>
+            <Input v-model={formData.desc} />
           </Form.Item>
           <Form.Item>
             <Button onClick={submit}>submit</Button>
