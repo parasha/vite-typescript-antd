@@ -1,8 +1,6 @@
 import { App, inject } from 'vue';
 
 export function install(app: App, options: any) {
-  
-  app.provide('i18n', options)
 
   app.directive('my-directive', {
     mounted(el, binding, vnode, oldVnode) {

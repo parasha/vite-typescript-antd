@@ -1,8 +1,10 @@
 
 // url query 参数格式化
-export function getQuery(): any{
+export function getQuery(): {
+	[key: string]: string
+}{
 	const urlStr = location.search;
-	const myRequest = new Object();
+	const myRequest = {};
 	if (urlStr.indexOf("?") != -1) {
 		const tempStr = urlStr.substr(urlStr.indexOf("?") + 1);
 		const strArr = tempStr.split("&");
