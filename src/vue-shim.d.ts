@@ -3,7 +3,7 @@ declare module '*.vue' {
   export default Vue;
 }
 
-declare type Res = { code: number, data?: any, msg?: string };
+declare type MockRes = { code: number, data?: any, msg?: string };
 
 declare namespace JSX {
   interface IntrinsicAttributes {

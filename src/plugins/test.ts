@@ -18,8 +18,3 @@ export function install(app: App, options: any) {
     }
   })
 }
-
-export function testPluginFn(){
-   const r = inject('i18n');
-   console.log('plugin test:', r)
-}

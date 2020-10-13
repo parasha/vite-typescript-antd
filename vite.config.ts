@@ -18,7 +18,7 @@ const config: UserConfig = {
     'ENV': process.env.APP_ENV
   },
   optimizeDeps: {
-    include: ["lodash", "echarts"]
+    include: ["echarts", '@ant-design/icons-vue', ]
   },
   plugins: [
     createJsxPlugin(), // jsx 支持 vue 原生指令

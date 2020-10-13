@@ -2,7 +2,6 @@ import { defineComponent, reactive, watchEffect, isRef, onMounted } from 'vue';
 import { Button } from 'ant-design-vue';
 import SlotChild from './slot';
 import SlotChildSfc from './slot.vue';
-import { testPluginFn } from '/@/plugins/test';
 
 export default defineComponent({
   name: 'Test',
@@ -17,10 +16,6 @@ export default defineComponent({
 
     watchEffect(() => {
       console.log('watchEffect:', state.count)
-    })
-
-    onMounted(() => {
-      testPluginFn();
     })
 
     return () => (

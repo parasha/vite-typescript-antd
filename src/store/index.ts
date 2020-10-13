@@ -1,6 +1,12 @@
 import { createStore } from 'vuex';
 import router from '/@/routers/index';
+import { getQuery } from '/@/common/js/getQuery';
 import { getUserInfo } from '/@/api/login';
+
+export function toLogin() {
+  const url: string = location.href.slice(location.origin.length);
+  router.replace(`/login?redirect=${encodeURI(url)}`)
+}
 
 export default createStore({
   modules: {},
@@ -19,9 +25,9 @@ export default createStore({
   },
   actions: {
     // 登录
-    async login(context, payload: {username: string, password: string}) {
-      console.log(payload);
-      console.log(router);
+    async login(context, payload: { username: string, password: string }) {
+      const redirect = getQuery().redirect || '/'
+      router.replace(redirect)
     },
     // 检查登录状态
     async getUserInfo(context) {
@@ -35,10 +41,10 @@ export default createStore({
       }
     },
     // 退出
-    logout(context){
+    logout(context) {
       // 删除 token
       context.commit('changeUserInfo', null);
-      router.replace('/login')
+      toLogin();
     }
   }
 })
