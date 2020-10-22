@@ -8,7 +8,7 @@ export default defineComponent({
     return () => (
       <div class={style['home-page']}>
         <div class="page-title">Vite  Demo</div>
-        <Alert type="success" show-icon message="Vite 是个好文明，但 tsx 不是（至少暂时不是）" style={{marginBottom: '30px'}}/>
+        <Alert type="success" show-icon message="Vite 是个好文明" style={{marginBottom: '30px'}}/>
         <Card title='依赖项'>
           <List>
             <List.Item>vue 3</List.Item>

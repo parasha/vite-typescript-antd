@@ -18,7 +18,7 @@ const config: UserConfig = {
     'ENV': process.env.APP_ENV
   },
   optimizeDeps: {
-    include: ["echarts", '@ant-design/icons-vue', ]
+    include: ["echarts", '@ant-design/icons-vue', 'ant-design-vue/es/date-picker/locale/zh_CN' ]
   },
   plugins: [
     createJsxPlugin(), // jsx 支持 vue 原生指令

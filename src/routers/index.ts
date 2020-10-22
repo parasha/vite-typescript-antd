@@ -31,7 +31,7 @@ export const routes: RouteRecordRaw[] | [] = [
             path: 'table',
             name: 'Antd-Table',
             meta: { title: '表格' },
-            component: () => import('/@/pages/Antd/pages/Table')
+            component: () => import('../pages/Antd/pages/Table/Table'),
           },
           {
             path: 'form',
@@ -59,7 +59,8 @@ export const routes: RouteRecordRaw[] | [] = [
     // 登录页
     path: '/login',
     name: 'Login',
-    component: import('../pages/User/Login.vue'),
+    // component: import('../pages/User/Login.vue'),
+    component: import('../pages/User/Login/index'),
   }
 ]
 
