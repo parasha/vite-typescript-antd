@@ -1,4 +1,4 @@
-import { defineComponent, reactive, watchEffect, isRef, onMounted } from 'vue';
+import { defineComponent, reactive, watchEffect, isRef, provide } from 'vue';
 import { Button } from 'ant-design-vue';
 import SlotChild from './slot';
 import SlotChildSfc from './slot.vue';
@@ -11,6 +11,8 @@ export default defineComponent({
     const add = () => {
       state.count += 1;
     }
+
+    provide('testProvide', 0);
 
     console.log('isRef:', isRef(state));
 

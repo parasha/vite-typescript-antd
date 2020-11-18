@@ -1,4 +1,4 @@
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, onMounted, inject } from 'vue';
 
 export default defineComponent({
   name: 'Test-slot',
@@ -17,6 +17,11 @@ export default defineComponent({
       console.log('emit:', emit);
       console.log('slots:', slots);
     })
+
+    // inject(key: InjectionKey<T> | string, defaultValue: T)
+    // inject defaultValue 在没有对应的 provide 时生效
+    const injectTest = inject('testProvide', 1)
+    console.log('inject', injectTest);
 
     const click = () => {
       console.log('tsx click')

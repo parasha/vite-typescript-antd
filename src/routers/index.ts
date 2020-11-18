@@ -36,8 +36,8 @@ export const routes: RouteRecordRaw[] | [] = [
           {
             path: 'form',
             name: 'Antd-Form',
-            meta: { title: '表单' },
-            component: () => import('/@/pages/Antd/pages/Form')
+            meta: { title: '表单-jsx' },
+            component: () => import('/@/pages/Antd/pages/Form/jsx')
           },
         ],
       },
