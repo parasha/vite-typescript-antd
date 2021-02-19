@@ -5,6 +5,7 @@ declare module '*.vue' {
 
 declare type MockRes = { code: number, data?: any, msg?: string };
 
+declare const ENV:String;
 declare namespace JSX {
   interface IntrinsicAttributes {
     ['v-if']?: unknown
