@@ -1,28 +1,31 @@
-import { UserConfig } from 'vite';
 import path from 'path';
-import { createJsxPlugin } from "vite-jsx/plugin";
+import { defineConfig } from 'vite';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import vue from '@vitejs/plugin-vue';
 
-const config: UserConfig = {
-  // proxy: {
-  //   // with options
-  //   '/api': {
-  //     target: 'http://jsonplaceholder.typicode.com',
-  //     changeOrigin: true,
-  //     rewrite: path => path.replace(/^\/api/, '')
-  //   }
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    },
+    // extensions: [
+    //   '.js', '.ts', '.jsx', '.tsx'
+    // ],
+  },
+  css:{
+    modules:{
+      scopeBehaviour: 'local'
+    }
+  },
+  // 全局变量
+  // define: {
+  //   'ENV': process.env.APP_ENV
   // },
-  alias: {
-    '/@/': path.resolve(__dirname, './src')
-  },
-  define:{
-    'ENV': process.env.APP_ENV
-  },
   optimizeDeps: {
-    include: ["echarts", '@ant-design/icons-vue', 'ant-design-vue/es/date-picker/locale/zh_CN' ]
+    include: ["echarts", '@ant-design/icons-vue', 'ant-design-vue/es/date-picker/locale/zh_CN']
   },
   plugins: [
-    createJsxPlugin(), // jsx 支持 vue 原生指令
+    vue(), // 提供 vue 单文件组件支持
+    vueJsx(), // 提供 jsx 支持
   ],
-}
-
-export default config;
+}); 

@@ -1,10 +1,10 @@
 import { defineComponent, reactive } from 'vue';
 import { RouteRecordRaw, RouterLink } from 'vue-router';
 import { Layout, Menu } from 'ant-design-vue';
-import Logo from '/@/assets/logo.png';
+import Logo from '@/assets/logo.png';
 import style from './less/basicLayout.module.less';
-import { routes } from '/@/routers/index';
-import store from '/@/store/index';
+import { routes } from '@/routers/index';
+import store from '@/store/index';
 
 const menuList = (list: RouteRecordRaw[], basePath = '/') => list.map(item => {
   const { children, meta = {} } = item;

@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 import { RouterView, onBeforeRouteUpdate, RouteLocationNormalized } from 'vue-router';
-import store from '/@/store/index';
+import store from '@/store/index';
 import PageSider from './PageSider';
 import { Layout, Button } from 'ant-design-vue';
 

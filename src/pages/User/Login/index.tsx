@@ -2,7 +2,7 @@ import { defineComponent, reactive } from 'vue';
 import { useStore } from 'vuex';
 import { Input, Button } from 'ant-design-vue';
 import style from './index.module.less';
-import Logo from '/@/assets/logo.png'
+import Logo from '@/assets/logo.png'
 
 export default defineComponent({
   setup() {

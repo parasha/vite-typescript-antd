@@ -1,7 +1,7 @@
 import { createStore } from 'vuex';
-import router from '/@/routers/index';
-import { getQuery } from '/@/common/js/getQuery';
-import { getUserInfo } from '/@/api/login';
+import router from '@/routers/index';
+import { getQuery } from '@/common/js/getQuery';
+import { getUserInfo } from '@/api/login';
 
 export function toLogin() {
   const url: string = location.href.slice(location.origin.length);

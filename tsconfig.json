@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "outDir": "./dist",
     "paths": {
-      "/@/*": ["src/*"]
+      "@/*": ["src/*"]
     },
     "declaration": true,
     "target": "esnext",
