@@ -4,6 +4,7 @@ import store from '@/store/index';
 import PageSider from './PageSider';
 import { Layout, Button } from 'ant-design-vue';
 
+// 登录校验
 const checkLogin = async (to: RouteLocationNormalized, from: RouteLocationNormalized, next: Function) => {
   const userinfo = await store.dispatch('getUserInfo');
   if (userinfo) {
@@ -14,15 +15,17 @@ const checkLogin = async (to: RouteLocationNormalized, from: RouteLocationNormal
 }
 
 export default defineComponent({
+  // 登陆校验
   beforeRouteEnter: checkLogin,
   setup() {
-
+    // 登录校验
     onBeforeRouteUpdate(checkLogin);
 
     return () => (
       <Layout>
         <PageSider />
         <Layout>
+          {/* 页面顶部登陆 */}
           <Layout.Header>
             <span class='username'>
               {store.state.userInfo ? store.state.userInfo.username : '未登录'}
