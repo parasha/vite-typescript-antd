@@ -9,7 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     },
     extensions: [
-      '.js', '.ts', '.jsx', '.tsx'
+      '.vue','.js', '.ts', '.jsx', '.tsx'
     ],
   },
   css:{

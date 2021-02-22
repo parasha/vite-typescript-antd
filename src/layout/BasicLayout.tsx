@@ -25,7 +25,6 @@ export default defineComponent({
         <Layout>
           <Layout.Header>
             <span class='username'>
-              {/* 这玩意怎么写啊？为什么报错啊？ */}
               {store.state.userInfo ? store.state.userInfo.username : '未登录'}
             </span>
             <Button

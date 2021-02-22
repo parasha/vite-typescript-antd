@@ -3,21 +3,6 @@ declare module '*.vue' {
   export default Vue;
 }
 
-declare type MockRes = { code: number, data?: any, msg?: string };
-
-declare const ENV:String;
-declare namespace JSX {
-  interface IntrinsicAttributes {
-    ['v-if']?: unknown
-    ['v-else-if']?: unknown
-    ['v-else']?: unknown
-    ['v-show']?: unknown
-    ['v-html']?: unknown
-    ['v-text']?: unknown
-    ['v-model']?: unknown
-  }
- }
-
 declare module '*.less' {
   const classes: { readonly [key: string]: string }
   export default classes

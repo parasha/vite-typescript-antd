@@ -1,21 +1,17 @@
 <template>
-  <div class="page-sfc" v-my-directive='{a:1}'>
-    单页面组件
-  </div>
+  <div class="page-sfc" v-my-directive="{ a: 1 }">单页面组件</div>
 </template>
 
 <script>
-import { } from 'vue';
+import {} from "vue";
 
-export default{
-setup() {
-
- }
+export default {
+  setup() {},
 };
 </script>
 
 <style lang="less" scoped>
-.page-sfc{
+.page-sfc {
   color: blue;
 }
 </style>
