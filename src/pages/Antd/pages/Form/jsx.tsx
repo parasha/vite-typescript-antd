@@ -20,7 +20,7 @@ export default defineComponent({
       <div>
         <Form model={formData}>
           <Form.Item label='姓名'>
-            <Input v-model={formData.name} />
+            <Input value={formData.name} onChange={e=>formData.name = e.target.value}/>
           </Form.Item>
           <Form.Item label='居住地'>
             <Select value={formData.region} onChange={(value: string) => { formData.region = value }}>
