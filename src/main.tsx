@@ -1,8 +1,10 @@
-import { createApp } from 'vue'
+import { createApp, defineComponent } from 'vue';
+import {RouterView} from 'vue-router';
+
 import router from './routers/index';
 import store from './store/index';
-import App from '@/App';
-// import '@/common/less/reset.less';
+
+import '@/common/less/reset.less';
 import '@/common/less/common.less';
 import 'ant-design-vue/dist/antd.css';
 
@@ -16,6 +18,15 @@ window.addEventListener('pageshow', (e) => {
     location.reload();
   }
 });
+
+const App = defineComponent({
+  name: 'App',
+  setup(){
+    return () => (
+      <RouterView />
+    )
+  }
+})
 
 const app = createApp(App).use(store).use(router).use(install, 'test plugin options')
 console.log('app: ', app);

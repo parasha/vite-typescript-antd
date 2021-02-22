@@ -8,9 +8,9 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     },
-    // extensions: [
-    //   '.js', '.ts', '.jsx', '.tsx'
-    // ],
+    extensions: [
+      '.js', '.ts', '.jsx', '.tsx'
+    ],
   },
   css:{
     modules:{
@@ -18,9 +18,9 @@ export default defineConfig({
     }
   },
   // 全局变量
-  // define: {
-  //   'ENV': process.env.APP_ENV
-  // },
+  define: {
+    
+  },
   optimizeDeps: {
     include: ["echarts", '@ant-design/icons-vue', 'ant-design-vue/es/date-picker/locale/zh_CN']
   },
