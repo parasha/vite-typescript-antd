@@ -1,7 +1,7 @@
 import { createApp, defineComponent } from 'vue';
 import {RouterView} from 'vue-router';
 
-import router from './routers/index';
+import router from './routes/index';
 import store from './store/index';
 
 import '@/common/less/reset.less';

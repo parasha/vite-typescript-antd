@@ -1,11 +1,12 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 import store from '@/store/index';
 
+import Account from './account';
+
 export const routes: RouteRecordRaw[] | [] = [
   {
     path: '/',
     redirect: '/home',
-    name: 'UserLogin',
     component: import('../layout/BasicLayout'),
     // 只有这里的 children 下面的路由会被算进侧边栏导航
     children: [
@@ -13,7 +14,7 @@ export const routes: RouteRecordRaw[] | [] = [
         path: 'home',
         name: 'Home',
         meta: { title: '首页', hide: true, },
-        component: import('@/pages/Home/index')
+        component: () => import('@/pages/Home/index')
       },
       {
         path: 'chart',
@@ -55,13 +56,8 @@ export const routes: RouteRecordRaw[] | [] = [
       }
     ]
   },
-  {
-    // 登录页
-    path: '/login',
-    name: 'Login',
-    // component: import('../pages/User/Login.vue'),
-    component: import('../pages/User/Login/index'),
-  }
+  // 账号相关：登录、注册、忘记密码……
+  Account,
 ]
 
 const router = createRouter({
