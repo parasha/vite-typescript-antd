@@ -5,7 +5,12 @@ export default {
         {
             path: 'login',
             name: 'login',
-            component: () => import('@/pages/account/login/index')
+            component: () => import('@/pages/account/login')
+        },
+        {
+            path: 'register',
+            name: 'register',
+            component: () => import('@/pages/account/register.vue')
         }
     ]
 }

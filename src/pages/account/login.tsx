@@ -3,9 +3,10 @@ import { useStore } from 'vuex';
 import { RouterLink } from 'vue-router';
 import { UserOutlined, KeyOutlined } from '@ant-design/icons-vue';
 import { Input, Button } from 'ant-design-vue';
-import style from '../index.module.less';
+import style from './index.module.less';
 
 export default defineComponent({
+  name: 'login',
   setup() {
     const state = reactive({
       username: '',
@@ -24,7 +25,7 @@ export default defineComponent({
           </p>
         <Input
           type="text"
-          placeholder="请输入用户名(随便写)"
+          placeholder="请输入账号(随便写)"
           value={state.username}
           onChange={(e) => { state.username = e.target.value }}
           class={style['input-line']}
@@ -44,8 +45,8 @@ export default defineComponent({
         </Input>
         <Button size="large" type="primary" onClick={submit} class={style['submit-button']}>登录</Button>
         <div class={style.others + ' flex'}>
-          <RouterLink to='/register' class={style['link-button']}>账号注册</RouterLink>
-          <RouterLink to='/reset-password' class={style['link-button']}>忘记密码</RouterLink>
+          <RouterLink to='/account/register' class={style['link-button']} replace>账号注册</RouterLink>
+          <RouterLink to='/account/reset-password' class={style['link-button']}>忘记密码</RouterLink>
         </div>
       </>
     )
