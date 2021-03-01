@@ -8,7 +8,7 @@ export function toLogin() {
   router.replace(`/account/login?redirect=${encodeURI(url)}`)
 }
 
-export default createStore({
+const store = createStore({
   modules: {},
   state: {
     loading: false,
@@ -48,3 +48,5 @@ export default createStore({
     }
   }
 })
+
+export default store;

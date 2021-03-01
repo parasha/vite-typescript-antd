@@ -93,6 +93,8 @@ export default defineComponent({
       nickname: "",
     });
 
+    const store = useStore();
+
     function checkBeforeFetchRegister (){
       console.log('校验：', formData);
       return true;
@@ -100,9 +102,12 @@ export default defineComponent({
 
     function register () {
       if(checkBeforeFetchRegister()){
-
+        store.dispatch('login', {
+          username: formData.username,
+          password: formData.password,
+        })
       }else{
-        
+        // 报错
       }
     }
 
