@@ -1,0 +1,1 @@
+import{I as a,J as s,K as e,l as t,L as c,M as d,N as o}from"./index.422cab0a.js";const r={setup(){}},n=o("data-v-5db02e5c");a("data-v-5db02e5c");const i={class:"page-sfc"};s();const p=n(((a,s,o,r,n,p)=>{const v=e("my-directive");return t((c(),d("div",i,"单页面组件",512)),[[v,{a:1}]])}));r.render=p,r.__scopeId="data-v-5db02e5c";export default r;

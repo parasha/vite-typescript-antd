@@ -19,5 +19,6 @@ npm i
 npm run dev
 
 # Compiles and minifies for production
+# 因为买的丐版服务器，所以使用本地打包
 npm run build
 ```
