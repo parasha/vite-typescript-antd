@@ -2,6 +2,8 @@ import { App, inject } from 'vue';
 
 export function install(app: App, options: any) {
 
+  console.log('plugin install');
+
   app.directive('my-directive', {
     mounted(el, binding, vnode, oldVnode) {
       // some logic ...
