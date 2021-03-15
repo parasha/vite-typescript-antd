@@ -21,6 +21,8 @@ export default defineComponent({
     // 登录校验
     onBeforeRouteUpdate(checkLogin);
 
+    console.log('base layout mount');
+
     return () => (
       <Layout>
         <PageSider />

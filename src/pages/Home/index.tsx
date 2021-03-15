@@ -5,6 +5,7 @@ import style from './index.module.less';
 export default defineComponent({
   name: 'Home',
   setup() {
+    console.log('home page mount');
     return () => (
       <div class={style['home-page']}>
         <div class="page-title">Vite  Demo</div>
