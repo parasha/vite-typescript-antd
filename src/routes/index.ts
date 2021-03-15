@@ -7,7 +7,7 @@ export const routes: RouteRecordRaw[] | [] = [
   {
     path: '/',
     redirect: '/home',
-    component: import('../layout/BasicLayout'),
+    component: () => import('../layout/BasicLayout'),
     // 只有这里的 children 下面的路由会被算进侧边栏导航
     children: [
       {

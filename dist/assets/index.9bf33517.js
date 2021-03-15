@@ -1,0 +1,1 @@
+import{d as e,j as n,c as l,e as s,g as a}from"./index.41e52d2b.js";var d=e({name:"Antd",setup:()=>(n((()=>{console.log("ant-design-view")})),()=>l("div",null,[l("p",null,[s("Ant-design-vue 组件")]),l(a,null,null)]))});export default d;

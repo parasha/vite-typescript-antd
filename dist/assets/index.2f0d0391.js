@@ -1,1 +1,0 @@
-import{d as s,c as a,g as d}from"./index.e94de0b2.js";import{s as e}from"./index.module.87c94b46.js";var l=s({setup:()=>()=>a("div",{id:e.account,class:"flex"},[a("div",{class:e["account-window"]+" flex"},[a(d,null,null)])])});export default l;
