@@ -22,6 +22,7 @@ window.addEventListener('pageshow', (e) => {
 const App = defineComponent({
   name: 'App',
   setup(){
+    console.log('app mount');
     return () => (
       <RouterView />
     )
