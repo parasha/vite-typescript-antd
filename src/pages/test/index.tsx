@@ -6,10 +6,10 @@ import SlotChildSfc from './slot.vue';
 export default defineComponent({
   name: 'Test',
   setup() {
-    const state = reactive({ count: 0 });
+    const state = reactive({ count: 0, count2: 0 });
 
     const add = () => {
-      state.count += 1;
+      state.count2 += 1;
     }
 
     provide('testProvide', 0);
@@ -32,7 +32,7 @@ export default defineComponent({
           {{ default: () => (<span>default slot</span>), name: () => (<span>name slot</span>) }}
         </SlotChild>
         <hr />
-        <Button type='danger' onClick={add}>喜加一</Button>
+        <Button type='danger' onClick={add}>watch: 喜加一</Button>
       </div>
     )
   }
