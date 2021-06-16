@@ -1,0 +1,11 @@
+#mo-editor{
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+#mo-editor > *{
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  text-indent: 2em;
+}
