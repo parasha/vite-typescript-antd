@@ -49,6 +49,12 @@ export const routes: RouteRecordRaw[] | [] = [
         component: () => import('@/pages/SFC/index.vue'),
       },
       {
+        path: 'memo',
+        name: 'Memo',
+        meta: { title: 'v-memo' },
+        component: () => import('@/pages/Memo/index.vue')
+      },
+      {
         path: 'test',
         name: 'Test',
         meta: { title: '测试' },
